@@ -47,3 +47,48 @@ func add(x, y int) int {
     3. Functions
     4. Channels
     5. Maps
+
+- There are Two type of Aggregators (Aggregate DataTypes) in GO:
+    1. Arrays (Similar types of Data)
+    2. Structs (Different types of Data)
+
+### Struct
+```go
+// Syntax
+// type struct_name struct {
+// variable_name dataType
+// variable_name dataType ....
+// }
+
+// Example
+import "fmt"
+
+type Vertex struct {
+	X int
+	Y int
+}
+
+func main() {
+	v := Vertex{1, 2}
+	v.X = 4
+	fmt.Println(v)
+}
+```
+- The first letter should always be capital of all teh variables declared in the Struct.
+
+
+### Arrays
+```go
+// Example
+import "fmt"
+
+func main() {
+	var a [2]string
+    a[0] = "Hello"
+    a[1] = "World"
+
+    fmt.Println(a[0], a[1])
+    fmt.Println(a)
+}
+```
+- Array's size is a part of its type. So arrays cannot be resized
